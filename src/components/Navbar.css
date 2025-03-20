@@ -22,7 +22,7 @@
 /* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     list-style: none;
 }
 

@@ -15,10 +15,11 @@ function App() {
       ) : (
         <>
           <Navbar />
+          <MenuSection />
           <main>
-            <AboutSection />
-            <MenuSection />
-            <BookingSection />
+            {/* <AboutSection /> */}
+            
+            {/* <BookingSection /> */}
           </main>
         </>
       )}
