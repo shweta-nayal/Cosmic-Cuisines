@@ -1,0 +1,147 @@
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #303334;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5f6467, #648a95);
+}
+
+/* Reserve Button */
+.reserve-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white !important;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reserve-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Social Media Icons */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons a {
+    color: white;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-icons a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* Astronaut Mode Toggle */
+.astronaut-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.astronaut-toggle:hover {
+    color: #ffcc00;
+    transform: rotate(360deg);
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Astronaut Mode (Dark & Fun Theme) */
+.astronaut-mode {
+    background: url("../assets/space-bg.jpg") no-repeat center center/cover;
+    color: #fff;
+}
+
+.astronaut-mode .navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.astronaut-mode .nav-links li a {
+    color: #ffcc00;
+}
+
+.astronaut-mode .nav-icons a {
+    color: #ffcc00;
+}
+
+.astronaut-mode .astronaut-toggle {
+    color: #ffcc00;
+}

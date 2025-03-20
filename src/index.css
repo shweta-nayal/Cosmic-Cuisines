@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.text-glow {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
